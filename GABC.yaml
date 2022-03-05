@@ -1,0 +1,39 @@
+attributes:
+- beginString: '[\w.:;,?!\s]*(?=\()'
+  regularExpression: true
+characters:
+- beginString: ()
+- beginString: \([‘,:;?^0-8]+?
+  endString: \)
+  regularExpression: true
+commands:
+- beginString: <
+  endString: '>'
+  regularExpression: false
+commentDelimiters:
+  inlineDelimiter: '%'
+comments: []
+completions: []
+extensions:
+- keyString: gabc
+filenames: []
+interpreters: []
+keywords: []
+metadata:
+  author: Toinewh Ed.
+  lastModified: '2022-03-05'
+  license: Same as CotEditor
+  version: '1.1'
+numbers:
+- beginString: '[*+†]'
+  regularExpression: true
+outlineMenu: []
+strings: []
+types:
+- beginString: '[a-z-]+:'
+  ignoreCase: true
+  regularExpression: true
+values: []
+variables:
+- beginString: (
+  endString: )
