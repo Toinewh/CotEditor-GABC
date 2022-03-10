@@ -1,5 +1,5 @@
 attributes:
-- beginString: '[\w.:;,?!\s]*(?=\()'
+- beginString: '[-:;,?!\w\s]*(?=[({}])'
   regularExpression: true
 characters:
 - beginString: ()
@@ -9,7 +9,8 @@ characters:
 commands:
 - beginString: <
   endString: '>'
-  regularExpression: false
+- beginString: '[{}]'
+  regularExpression: true
 commentDelimiters:
   inlineDelimiter: '%'
 comments: []
@@ -21,19 +22,25 @@ interpreters: []
 keywords: []
 metadata:
   author: Toinewh Ed.
-  lastModified: '2022-03-05'
+  description: Syntax highlighting for GABC files (Gregorian chant notation code).
+  distributionURL: https://github.com/Toinewh/CotEditor-GABC
+  lastModified: '2022-03-10'
   license: Same as CotEditor
-  version: '1.1'
+  version: '1.4'
 numbers:
 - beginString: '[*+†]'
   regularExpression: true
 outlineMenu: []
-strings: []
+strings:
+- beginString: '['
+  endString: ']'
 types:
 - beginString: '[a-z-]+:'
   ignoreCase: true
   regularExpression: true
-values: []
+values:
+- beginString: '[\d-_<>!.''~xy#@/sqWrR:z](?=[^()]*\))'
+  regularExpression: true
 variables:
 - beginString: (
   endString: )
