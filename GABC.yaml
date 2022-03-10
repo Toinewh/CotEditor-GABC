@@ -1,5 +1,5 @@
 attributes:
-- beginString: '[-:;,.?!\w\s]*(?=[({}])'
+- beginString: '[-:;,.?!\w\s]*(?=[<({}])'
   regularExpression: true
 characters:
 - beginString: ()
