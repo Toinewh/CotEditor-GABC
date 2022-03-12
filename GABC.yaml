@@ -30,12 +30,29 @@ metadata:
 numbers:
 - beginString: '[*+†]'
   regularExpression: true
-outlineMenu: []
+outlineMenu:
+- beginString: '[a-z0-9-]+(?=:)'
+  description: Header
+- beginString: (?=A\(.+?\)men\.?)
+  description: Amen
+  keyString: Amen
+- beginString: (\d+)\.(?=[^;])
+  bold: false
+  description: Verse
+  keyString: pars $1
+- beginString: (?<=%%)
+  description: Code
+  keyString: pars 1
+- beginString: <eu>.+$
+  description: Euouae
+  keyString: terminatio modi
 strings:
 - beginString: '['
   endString: ']'
 types:
-- beginString: '[a-z-]+:'
+- beginString: ;$
+  regularExpression: true
+- beginString: '[a-z0-9-]+:'
   ignoreCase: true
   regularExpression: true
 values:
